@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen2PM02.ListaAlumnos">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Background="#12293F" Text="Listado de alumnados 7mo grado" Padding="20,5" HorizontalTextAlignment="Center" TextColor="white" FontSize="30"/>
+            <Entry x:Name="FormYear" Margin="20,20" Placeholder="Ingrese el año lectivo"/>
+            <Button x:Name="btnBuscar" Text="Buscar" Background="#12293F" TextColor="white" Clicked="btnBuscar_Clicked" Margin="20,10"></Button>
+
+            <ListView x:Name="lstAlumnos" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                
+                                <Label Text="{Binding alumno_rne}" TextColor="#AAA499" Margin="20,1"></Label>
+                                <Label Text="{Binding nombreCompleto}" TextColor="#AAA499" Margin="20,1"></Label>
+                                <Label Text="{Binding alumno_genero}" TextColor="#AAA499" Margin="20,1"></Label>
+                                <Label Text="{Binding grado_nombre}" TextColor="#AAA499" Margin="20,1"></Label>
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

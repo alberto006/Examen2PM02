@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Examen2PM02.PerfilAlumno">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label Background="#12293F" Text="Perfil de Alumno" Padding="20,20" HorizontalTextAlignment="Center" TextColor="white" FontSize="30"/>
+            <Entry x:Name="FormBusqueda" Margin="30,20" Placeholder="RNE Alumno..."/>
+            <Button x:Name="btnBuscar" Margin="20,10" Text="Buscar" BackgroundColor="#12293F" Clicked="btnBuscar_Clicked" TextColor="white"></Button>
+
+            <ListView x:Name="lstAlumnos" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="RNE Alumno" TextColor="#F69440"></Label>
+                                <Label Text="{Binding alumno_rne}" TextColor="#AAA499"></Label>
+
+                                <Label Text="Primer Nombre" TextColor="#F69440"></Label>
+                                <Label Text="{Binding alumno_nombre1}" TextColor="#AAA499"></Label>
+
+                                <Label Text="Segundo Nombre" TextColor="#F69440"></Label>
+                                <Label Text="{Binding alumno_nombre2}" TextColor="#AAA499"></Label>
+                                
+                                <Label Text="Primer Apellido" TextColor="#F69440"></Label>
+                                <Label Text="{Binding alumno_ape1}" TextColor="#AAA499"></Label>
+
+                                <Label Text="Segundo Apellido" TextColor="#F69440"></Label>
+                                <Label Text="{Binding alumno_ape2}" TextColor="#AAA499"></Label>
+
+                                <Label Text="Genero" TextColor="#F69440"></Label>
+                                <Label Text="{Binding alumno_genero}" TextColor="#AAA499"></Label>
+
+                                <Label Text="Fecha Nacimiento" TextColor="#F69440"></Label>
+                                <Label Text="{Binding alumno_fnac}" TextColor="#AAA499"></Label>
+
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
